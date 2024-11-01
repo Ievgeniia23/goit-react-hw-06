@@ -1,0 +1,40 @@
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid gray;
+    padding: 12px;
+    width: 300px;
+    
+}
+.formField {
+
+ font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 8px;
+  /* margin-bottom: 20px; */
+  width: 270px;
+
+
+}
+
+.formField::placeholder {
+  color: #d7d1d1; 
+  font-size: 14px; 
+  font-style: italic;
+}
+
+.formLabel {
+    color: #7e7a7e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+ 
+ }
+.error {
+  color: #eb19d2; 
+  font-size: 14px; 
+  font-style: italic;
+  margin-top: 0;
+  text-align: left;
+  }
