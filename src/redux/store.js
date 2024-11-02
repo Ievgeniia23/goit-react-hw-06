@@ -1,12 +1,11 @@
-//proposta
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
+
 import storage from 'redux-persist/lib/storage';
+import { configureStore } from '@reduxjs/toolkit';
 
 import contactsReducer from './contactsSlice';
 import filtersReducer from './filtersSlice';
 
-//IO
+
 
 import {
   persistStore,
@@ -18,13 +17,13 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+
 
 
 const contactsConfig = {
   key: 'contacts',
   storage,
-  whitelist: ['items'], // зберігаємо тільки поле items зі списком контактів
+  whitelist: ['items'], 
 };
 
 
@@ -32,7 +31,7 @@ export const store = configureStore({
   reducer: {
     contacts: persistReducer(contactsConfig, contactsReducer),
    
-    filter: filtersReducer,
+    filters: filtersReducer,
   },
 
   middleware: getDefaultMiddleware =>
@@ -45,19 +44,3 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-const persistConfig = {
-  key: 'contacts',
-  storage,
-  whitelist: ['items'], // зберігаємо тільки поле items зі списком контактів
-};
-
-const rootReducer = combineReducers({
-  contacts: persistReducer(persistConfig, contactsReducer),
-  filters: filtersReducer,
-});
-
-export const store = configureStore({
-  reducer: rootReducer,
-});
-
-export const persistor = persistStore(store);

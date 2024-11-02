@@ -6,10 +6,12 @@
     padding: 10px 8px;
     justify-content: space-between;
     width: 300px;
+    
  
 }
 .icon {
    margin-right: 10px;
+   color: rgb(71, 7, 18);
    
 }
 
@@ -26,5 +28,7 @@ font-size: 20px;
 .listBtn {
 align-self: flex-start;
 margin-top: 20px;
+color: rgb(172, 103, 103);
+background-color: rgb(219, 214, 214);
 
 }

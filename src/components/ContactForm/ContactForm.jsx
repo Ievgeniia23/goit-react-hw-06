@@ -62,7 +62,7 @@ const numberFieldId = useId();
         <ErrorMessage
           name="number" component="span" className={css.error} />
               
-			<button type='submit'>Add contact</button>
+			<button className={css.btnForm} type='submit'>Add contact</button>
 		</Form>
     </Formik>
   );
